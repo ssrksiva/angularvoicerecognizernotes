@@ -1,0 +1,15 @@
+<div class="app">
+	<app-note *ngFor="let note of notes" (dismiss)="deleteNote($event)" (focusout)="saveNote($event)" id="{{note.id}}" [content]="note.content"></app-note>
+</div>
+<div class = "overlay voice show" (click)="hideImage()" >
+<img width="350" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/bddf8a11582713.560fa0db0dee5.gif" />
+</div>
+<div  class="toolbar" id="toolbar" tabindex="0">
+	<button class="add material-icons" (click)="addNote()" >
+  note_add
+	</button>
+  <!-- <button (click) = "updateAllNotes()">Click</button> -->
+  <!-- <button class="record material-icons" (click)="record($event)">
+    settings_voice
+  </button> -->
+</div>
